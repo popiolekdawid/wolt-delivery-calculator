@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DeliveryForm from "./DeliveryForm";
-import OutputBox from "./OutputBox";
+import DeliveryForm from "./Components/DeliveryForm";
+import OutputBox from "./Components/OutputBox";
 
 interface FormData {
   cartValue: number;
