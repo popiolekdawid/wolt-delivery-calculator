@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import DeliveryForm from "./DeliveryForm";
+import OutputBox from "./OutputBox";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface FormData {
+  cartValue: number;
+  deliveryDistance: number;
+  amountOfItems: number;
+  dateOfDelivery: Date;
 }
 
-export default App;
+const App = () => {
+  const [formData, setFormData] = useState<FormData>({
+    cartValue: 0,
+    deliveryDistance: 0,
+    amountOfItems: 0,
+    dateOfDelivery: new Date(),
+  });
+
+  const handleFormSubmit = (data: FormData) => {
+    setFormData(data);
+  };
+
+  return (
+    <div>
+      <DeliveryForm onSubmit={handleFormSubmit} /><br/>
+      <OutputBox formData={formData} />
+    </div>
+    );
+  };
+    
+  export default App;
