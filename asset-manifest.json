@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wolt-delivery-calculator/static/css/main.8c3e4bad.css",
+    "main.js": "/wolt-delivery-calculator/static/js/main.d12c5b68.js",
+    "index.html": "/wolt-delivery-calculator/index.html",
+    "main.8c3e4bad.css.map": "/wolt-delivery-calculator/static/css/main.8c3e4bad.css.map",
+    "main.d12c5b68.js.map": "/wolt-delivery-calculator/static/js/main.d12c5b68.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c3e4bad.css",
+    "static/js/main.d12c5b68.js"
+  ]
+}
