@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import InputField from './InputField';
+import InputField from '../InputField';
+import './DeliveryForm.css';
 
 interface FormData {
   cartValue: number;
@@ -39,7 +40,7 @@ const DeliveryForm = ({ onSubmit }: DeliveryFormProps) => {
   };
 
   return (
-    <form onSubmit={(event) => {
+    <form className="form" onSubmit={(event) => {
         event.preventDefault();
         onSubmit(formData);
       }}>
@@ -68,14 +69,14 @@ const DeliveryForm = ({ onSubmit }: DeliveryFormProps) => {
         onChange={handleInputChange}
       />
       <InputField
-          label="Delivery Date"
+          label="Delivery Date (UTC)"
           type="datetime-local"
           name="dateOfDelivery"
           value={formData.dateOfDelivery.toISOString().substr(0, 16)}
           min={new Date().toISOString().substr(0, 16)}
           onChange={handleDateChange}
         />
-      <button type="submit">Submit</button>
+      <button type="submit" className="form-button">Submit</button>
     </form>
   );
 };

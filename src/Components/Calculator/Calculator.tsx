@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import DeliveryForm from "./Components/DeliveryForm";
-import OutputBox from "./Components/OutputBox";
+import DeliveryForm from "../DeliveryForm";
+import OutputBox from "../OutputBox";
+import "./Calculator.css"
 
 interface FormData {
   cartValue: number;
@@ -9,7 +10,7 @@ interface FormData {
   dateOfDelivery: Date;
 }
 
-const App = () => {
+const Calculator = () => {
   const [formData, setFormData] = useState<FormData>({
     cartValue: 0,
     deliveryDistance: 0,
@@ -22,11 +23,12 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="Calculator">
+      <h1 className="title">Delivery Fee Calculator</h1>
       <DeliveryForm onSubmit={handleFormSubmit} /><br/>
       <OutputBox formData={formData} />
     </div>
     );
   };
     
-  export default App;
+  export default Calculator;

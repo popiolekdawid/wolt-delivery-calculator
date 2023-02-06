@@ -1,4 +1,5 @@
 import React from 'react';
+import "./InputField.css"
 
 interface InputFieldProps {
   label: string;
@@ -11,8 +12,9 @@ interface InputFieldProps {
 
 const InputField = ({ label, type, name, value, min, onChange }: InputFieldProps) => (
   <div>
-    <label htmlFor={name}>{label}:</label>
+    <label className="form-label" htmlFor={name}>{label}:</label>
     <input
+      className= {type}
       type={type}
       name={name}
       id={name}

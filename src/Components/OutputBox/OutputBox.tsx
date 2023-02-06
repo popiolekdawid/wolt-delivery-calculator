@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "./OutputBox.css";
 
 interface Props {
   formData: {
@@ -15,6 +16,7 @@ const OutputBox = ({ formData }: Props) => {
   useEffect(() => {
     const calculateFee = (): void => {
       let fee = 0;
+
       const { cartValue, amountOfItems, deliveryDistance, dateOfDelivery } = formData;
 
       if (cartValue < 10) {
@@ -53,8 +55,8 @@ const OutputBox = ({ formData }: Props) => {
   }, [formData]);
 
   return (
-    <div>
-      <label className="output-container">Delivery Fee: {deliveryFee}€</label>
+    <div className="output-container">
+      <label>Delivery Fee: {deliveryFee}€</label>
     </div>
   );
 };
