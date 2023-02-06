@@ -44,7 +44,7 @@ const DeliveryForm = ({ onSubmit }: DeliveryFormProps) => {
         onSubmit(formData);
       }}>
       <InputField
-        label="Cart Value (EUR): "
+        label="Cart Value (EUR)"
         type="number"
         name="cartValue"
         value={formData.cartValue}
@@ -52,7 +52,7 @@ const DeliveryForm = ({ onSubmit }: DeliveryFormProps) => {
         onChange={handleInputChange}
       />
       <InputField
-        label="Delivery Distance (km): "
+        label="Delivery Distance (m)"
         type="number"
         name="deliveryDistance"
         value={formData.deliveryDistance}
@@ -60,7 +60,7 @@ const DeliveryForm = ({ onSubmit }: DeliveryFormProps) => {
         onChange={handleInputChange}
       />
       <InputField
-        label="Amount of Items: "
+        label="Amount of Items"
         type="number"
         name="amountOfItems"
         value={formData.amountOfItems}
@@ -68,7 +68,7 @@ const DeliveryForm = ({ onSubmit }: DeliveryFormProps) => {
         onChange={handleInputChange}
       />
       <InputField
-          label="Delivery Date: "
+          label="Delivery Date"
           type="datetime-local"
           name="dateOfDelivery"
           value={formData.dateOfDelivery.toISOString().substr(0, 16)}
